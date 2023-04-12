@@ -4,7 +4,7 @@ This is the repository that contains source code for the [Nerfies website](https
 
 If you find E-ENF useful for your work please cite:
 ```
-@article{Xu2023seeing,
+@InProceedings{Xu2023seeing,
       title={“Seeing” Electric Network Frequency from Events},
       author={Lexuan, Xu and Guang, Hua and Haijian, Zhang and Lei, Yu and Ning, Qiao},
       journal={Computer Vision and Pattern Recognition (CVPR)},
