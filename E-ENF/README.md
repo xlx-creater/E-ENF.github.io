@@ -1,13 +1,13 @@
-# Level-S2fM
+# E-ENF
 
 This is the repository that contains source code for the [Nerfies website](https://nerfies.github.io).
 
-If you find Level-S2fM useful for your work please cite:
+If you find E-ENF useful for your work please cite:
 ```
-@article{xiao2022level,
-      title={Level-S $\^{} 2$ fM: Structure from Motion on Neural Level Set of Implicit Surfaces},
-      author={Xiao, Yuxi and Xue, Nan and Wu, Tianfu and Xia, Gui-Song},
-      journal={arXiv preprint arXiv:2211.12018},
+@article{Xu2023seeing,
+      title={“Seeing” Electric Network Frequency from Events},
+      author={Lexuan, Xu and Guang, Hua and Haijian, Zhang and Lei, Yu and Ning, Qiao},
+      journal={Computer Vision and Pattern Recognition (CVPR)},
       year={2022}
     }
 ```
