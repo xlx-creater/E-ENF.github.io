@@ -1,0 +1,669 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>“Seeing” Electric Network Frequency from Events</title>
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-PYVRSFMDRL"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+
+    gtag('js', new Date());
+
+    gtag('config', 'G-PYVRSFMDRL');
+  </script>
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+        rel="stylesheet">
+
+  <link rel="stylesheet" href="./css/bulma.min.css">
+  <link rel="stylesheet" href="./css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./css/index.css">
+  <!-- <link rel="icon" href="./images/favicon.svg"> -->
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./js/fontawesome.all.min.js"></script>
+  <script src="./js/bulma-carousel.min.js"></script>
+  <script src="./js/bulma-slider.min.js"></script>
+  <script src="./js/index.js"></script>
+  <script src="./js/video_comparison.js"></script>
+
+</head>
+<body>
+
+
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h1 class="title is-1 publication-title">“Seeing” Electric Network Frequency from Events</h1>
+          <div class="is-size-5 publication-authors">
+            <span class="author-block">
+              <a href="https://scholar.google.com.hk/citations?hl=zh-CN&user=g3itm8IAAAAJ">Lexuan Xu</a><sup>1</sup><sup>*</sup>,</span>
+            <span class="author-block">
+              <a href="https://ghua-ac.github.io/">Guang Hua</a><sup>2</sup><sup>*</sup>,</span>
+            <span class="author-block">
+              <a href="https://scholar.google.com/citations?user=cEWbejoAAAAJ&hl=zh-CN&oi=ao">Haijian Zhang</a><sup>1</sup><sup>†</sup>,
+            </span>
+            <span class="author-block">
+              <a href="https://scholar.google.com/citations?user=Klc_GHUAAAAJ&hl=zh-CN">Lei Yu</a><sup>1</sup><sup>†</sup>,
+            <span class="author-block">
+              <a href="https://scholar.google.com/citations?user=e7FIdOMAAAAJ&hl=zh-CN&oi=ao">Ning Qiao</a><sup>3</sup>,
+            </span>
+          </div>
+
+          <div class="is-size-5 publication-authors">
+            <span class="author-block"><sup>1</sup>Wuhan University, Wuhan, China</span> <br />
+            <span class="author-block"><sup>2</sup>Institute for Infocomm Research (I2R), A*STAR, Singapore</span> <br />
+            <span class="author-block"><sup>3</sup>SynSense Tech. Co. Ltd., Chengdu, China</span> <br />
+          </div>
+
+          <div class="column has-text-centered">
+            <div class="publication-links">
+              <!-- PDF Link. -->
+              <span class="link-block">
+                <a href="https://arxiv.org/pdf/2211.12018"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fas fa-file-pdf"></i>
+                  </span>
+                  <span>Paper</span>
+                </a>
+              </span>
+              <span class="link-block">
+                <a href="https://arxiv.org/abs/2211.12018"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="ai ai-arxiv"></i>
+                  </span>
+                  <span>arXiv</span>
+                </a>
+              </span>
+              <!-- Code Link. -->
+              <span class="link-block">
+                <a href="https://github.com/xlx-creater/E-ENF"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-github"></i>
+                  </span>
+                  <span>Code</span>
+                  </a>
+              </span>
+              <!-- Dataset Link. -->
+              <span class="link-block">
+                <a href="https://whueducn-my.sharepoint.com/:f:/g/personal/2018302120267_whu_edu_cn/En7DQ7Sg-KhIjeHlphDd1sIBA7alS2xg6UqKfbWf0E-3Zg?e=9aDKcG"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="far fa-images"></i>
+                  </span>
+                  <span>Data</span>
+                  </a>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="hero teaser">
+  <div class="subtitle has-text-centered">
+    <div class="container is-max-desktop">
+      <div class="hero-body">
+        <img src='./images/Illustrations.png' width="640" height="340",id="Illustrations"> 
+        <img src='./images/Results.png' width="640" height="340",id="Results">
+        <h2 class="subtitle has-text-centered">
+          <div class="columns is-centered has-text-centered">
+            <div class="column is-four-fifths">
+              <div class="content has-text-justified" >
+                <br></br>
+                <p>
+                  Our study aims to estimate Electric Network Frequency (ENF) fluctuations, implicit in light flickering, from event streams recorded by event cameras.
+                </p>
+                <!-- <br></br> -->
+                <p>
+                  The method we introduce in this paper is referred to as <b>E-ENF</b>, which yields superior estimation results in various scenarios as compared to video-based methods (V-ENF). 
+                </p>
+              </div>
+            </div>
+          </div>
+        </h2>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+<section class="section" id="Abstract">
+  <div class="container is-max-desktop">
+    <!-- Abstract. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
+            Most of the artificial lights fluctuate in response to the
+            grid's alternating current and exhibit subtle variations in
+            terms of both intensity and spectrum, providing the potential
+            to estimate the Electric Network Frequency (ENF) from
+            conventional frame-based videos. Nevertheless, the performance
+            of Video-based ENF (V-ENF) estimation largely relies
+            on the imaging quality and thus may suffer from significant
+            interference caused by non-ideal sampling, motion,
+            and extreme lighting conditions.
+          </p>
+          <p>
+            In this paper, we show
+            that the ENF can be extracted without the above limitations
+            from a new modality provided by the so-called event
+            camera, a neuromorphic sensor that encodes the light intensity
+            variations and asynchronously emits events with extremely
+            high temporal resolution and high dynamic range.
+            Specifically, we first formulate and validate the physical
+            mechanism for the ENF captured in events, and then propose
+            a simple yet robust Event-based ENF (E-ENF) estimation
+            method through mode filtering and harmonic enhancement.
+          </p>
+          <p>
+            Furthermore, we build an Event-Video ENF Dataset
+            (EV-ENFD) that records both events and videos in diverse
+            scenes. Extensive experiments on EV-ENFD demonstrate
+            that our proposed E-ENF method can extract more accurate
+            ENF traces, outperforming the conventional V-ENF by
+            a large margin, especially in challenging environments with
+            object motions and extreme lighting conditions.
+          </p>
+        </div>
+      </div>
+    </div>
+    <!--/ Abstract. -->
+  </div>
+</section>
+
+
+
+<section class="section" id="section">
+  <!-- <section class="section" id="Dataset"> -->
+   <!-- Dataset. -->
+    <div class="container is-max-desktop">
+     <h2 class="title is-3">Dataset</h2> 
+    
+     <h3 class="title is-4"><li>Event-Video ENF Dataset (EV-ENFD)</li></h3>
+
+   <!-- <section class="section"> -->
+    <!--/ Paper Pipeline. -->
+    
+      <!-- <div class="columns is-centered"> -->
+  
+        <!-- Two view Initialization. -->
+        <!-- <div class="column"> -->
+          <div class="content">
+            <div class="content has-text-justified">  
+            <p>
+              we construct the EV-ENFD for real illumination
+              scenes using two cameras with a rolling shutter mechanism
+              to acquire videos and an event camera to acquire events.
+              All cameras are fixed on a tripod to ensure synchronized
+              recording time and scene.
+            </p>
+            <p>
+            The EV-ENFD has three categories according to the capturing
+            conditions: static for <b><i>static scenes</i></b> without relative
+            motions, dynamic for <b><i>dynamic scenes</i></b> caused by object or camera motions, and <b><i>extreme lighting</i></b> for the scenes with
+            over or under-exposed regions.
+            </p>
+            </div>
+          </div>
+        <!-- </div> -->
+        <!--/ Visual Effects. -->
+  
+        <!-- Matting. -->
+        <!-- <div class="column">
+            <div class="column content"> -->
+
+              <!-- <section class="hero is-light is-small"> -->
+                <!-- <div class="hero-body"> -->
+
+                <!-- </div> -->
+              <!-- </section> -->
+            <!-- </div>
+        </div> -->
+      <!-- </div> -->
+      <!--/ Matting. -->
+      
+      <!-- <div class="columns is-centered has-text-centered"> -->
+        <!-- <div class="column is-four-fifths"> -->
+            <li><b>Static Scenes</b> </li>
+        <!-- </div> -->
+      <!-- </div>     -->
+      
+      <div class="container" style="width:900px;height: 200px;">
+        <div id="results-carousel" class="carousel results-carousel">
+          <div class="item item-steve" style="width:722px;height: 200px;margin:0 auto;">
+            <img src='./images/static/1.png' style="width:240px;height:200px;">
+            <img src='./images/static/2.png' style="width:240px;height:200px;">
+            <img src='./images/static/3.png' style="width:240px;height:200px;">
+          </div>
+          <div class="item item-chair-tp" style="width:722px;height: 200px;;margin:0 auto;">
+            <img src='./images/static/4.png' style="width:240px;height:200px;">
+            <img src='./images/static/5.png' style="width:240px;height:200px;">
+            <img src='./images/static/6.png' style="width:240px;height:200px;">
+          </div>
+          <div class="item item-shiba" style="width:722px;height: 200px;margin:0 auto;">
+            <img src='./images/static/7.png' style="width:240px;height:200px;">
+            <img src='./images/static/8.png' style="width:240px;height:200px;">
+            <img src='./images/static/9.png' style="width:240px;height:200px;">
+          </div>
+          <div class="item item-toby" style="width:722px;height: 200px;margin:0 auto;">
+            <img src='./images/static/10.png' style="width:240px;height:200px;">
+            <img src='./images/static/11.png' style="width:240px;height:200px;">
+            <img src='./images/static/12.png' style="width:240px;height:200px;">
+          </div>
+          <div class="item item-toby" style="width:722px;height: 200px;margin:0 auto;">
+            <img src='./images/static/13.png' style="width:240px;height:200px;">
+            <img src='./images/static/14.png' style="width:240px;height:200px;">
+            <img src='./images/static/15.png' style="width:240px;height:200px;">
+          </div>
+          <div class="item item-toby" style="width:722px;height: 200px;;margin:0 auto;">
+            <img src='./images/static/16.png' style="width:240px;height:200px;">
+          </div>
+        </div>
+      </div>
+      
+
+        <!-- <div class="column is-four-fifths"> -->
+          <li><b>Dynamic Scenes</b> </li>  
+        <!-- </div> -->
+    
+      <div class="container" style="width:900px;height: 200px;">
+        <div id="results-carousel" class="carousel results-carousel">
+            <div class="item item-steve" style="width:722px;height: 200px;margin:0 auto;">
+            <img src='./images/dynamic/1.png' style="width:240px;height:200px;">
+            <img src='./images/dynamic/2.png' style="width:240px;height:200px;">
+            <img src='./images/dynamic/3.png' style="width:240px;height:200px;">
+          </div>
+          <div class="item item-chair-tp" style="width:722px;height: 200px;;margin:0 auto;">
+            <img src='./images/dynamic/4.png' style="width:240px;height:200px;">
+            <img src='./images/dynamic/5.png' style="width:240px;height:200px;">
+            <img src='./images/dynamic/6.png' style="width:240px;height:200px;">
+          </div>
+          <div class="item item-shiba" style="width:722px;height: 200px;margin:0 auto;">
+            <img src='./images/dynamic/7.png' style="width:240px;height:200px;">
+            <img src='./images/dynamic/8.png' style="width:240px;height:200px;">
+            <img src='./images/dynamic/9.png' style="width:240px;height:200px;">
+          </div>
+          <div class="item item-toby" style="width:722px;height: 200px;margin:0 auto;">
+            <img src='./images/dynamic/10.png' style="width:240px;height:200px;">
+            <img src='./images/dynamic/11.png' style="width:240px;height:200px;">
+            <img src='./images/dynamic/12.png' style="width:240px;height:200px;">
+          </div>
+          <div class="item item-toby" style="width:722px;height: 200px;margin:0 auto;">
+            <img src='./images/dynamic/13.png' style="width:240px;height:200px;">
+            <img src='./images/dynamic/14.png' style="width:240px;height:200px;">
+            <img src='./images/dynamic/15.png' style="width:240px;height:200px;">
+          </div>
+          <div class="item item-toby" style="width:722px;height: 200px;;margin:0 auto;">
+            <img src='./images/dynamic/16.png' style="width:240px;height:200px;">
+            <img src='./images/dynamic/17.png' style="width:240px;height:200px;">
+            <img src='./images/dynamic/18.png' style="width:240px;height:200px;">
+          </div>
+          <div class="item item-toby" style="width:722px;height: 200px;margin:0 auto;">
+            <img src='./images/dynamic/19.png' style="width:240px;height:200px;">
+            <img src='./images/dynamic/20.png' style="width:240px;height:200px;">
+            <img src='./images/dynamic/21.png' style="width:240px;height:200px;">
+          </div>
+          <div class="item item-toby" style="width:722px;height: 200px;margin:0 auto;">
+            <img src='./images/dynamic/22.png' style="width:240px;height:200px;">
+            <img src='./images/dynamic/23.png' style="width:240px;height:200px;">
+            <img src='./images/dynamic/24.png' style="width:240px;height:200px;">
+          </div>
+          <div class="item item-toby" style="width:722px;height: 200px;margin:0 auto;">
+            <img src='./images/dynamic/25.png' style="width:240px;height:200px;">
+          </div>
+        </div>
+      </div>
+      
+      
+      <li><b>Extreme Lighting</b> </li>
+      <div class="container" style="width:900px;height: 200px;">
+        <div id="results-carousel" class="carousel results-carousel">
+          <div class="item item-steve" style="width:722px;height: 200px;margin:0 auto;">
+            <img src='./images/extreme/1.png' style="width:240px;height:200px;">
+            <img src='./images/extreme/2.png' style="width:240px;height:200px;">
+            <img src='./images/extreme/3.png' style="width:240px;height:200px;">
+          </div>
+          <div class="item item-chair-tp" style="width:722px;height: 200px;;margin:0 auto;">
+            <img src='./images/extreme/4.png' style="width:240px;height:200px;">
+            <img src='./images/extreme/5.png' style="width:240px;height:200px;">
+            <img src='./images/extreme/6.png' style="width:240px;height:200px;">
+          </div>
+          <div class="item item-shiba" style="width:722px;height: 200px;margin:0 auto;">
+            <img src='./images/extreme/7.png' style="width:240px;height:200px;">
+            <img src='./images/extreme/8.png' style="width:240px;height:200px;">
+            <img src='./images/extreme/9.png' style="width:240px;height:200px;">
+          </div>
+          <div class="item item-toby" style="width:722px;height: 200px;margin:0 auto;">
+            <img src='./images/extreme/10.png' style="width:240px;height:200px;">
+          </div>
+        </div>
+      </div>
+  
+     <br></br>
+
+    <!-- Comparsion. -->
+      <div class="columns is-centered">
+        <div class="column is-full-width">
+          <h2 class="title is-3">Comparison</h2>
+        </div>
+      </div>
+    <!--/ Comparsion. -->
+    
+
+      <li><b>Results on Static Scene</b> </li>
+
+      <div class="container is-max-desktop">
+        <div class="columns is-centered">
+    
+          <!-- Two view Initialization. -->
+          <div class="column">
+            <div class="content">
+              <video id="sdf_tri" autoplay controls muted loop playsinline height="100%">
+                <source src="./videos/static1.mp4"
+                        type="video/mp4">
+              </video>
+            </div>
+          </div>
+          <!--/ Visual Effects. -->
+    
+          <!-- Matting. -->
+          <div class="column">
+            <div class="columns is-centered">
+              <div class="column content">
+                <video id="nba_demo" autoplay controls muted loop playsinline height="100%">
+                  <source src="./videos/Event_Static1.mp4"
+                          type="video/mp4">
+                </video>
+              </div>
+          
+            </div>
+          </div>
+          <div class="column">
+            <div class="content">
+              <img src='./images/Static1.png' width="640" height="340",id="Results">
+            </div>
+          </div>
+        </div>
+
+        <div class="columns is-centered">
+    
+          <!-- Two view Initialization. -->
+          <div class="column">
+            <div class="content">
+              <video id="sdf_tri" autoplay controls muted loop playsinline height="100%">
+                <source src="./videos/static2.mp4"
+                        type="video/mp4">
+              </video>
+            </div>
+          </div>
+          <!--/ Visual Effects. -->
+    
+          <!-- Matting. -->
+          <div class="column">
+            <div class="columns is-centered">
+              <div class="column content">
+                <video id="nba_demo" autoplay controls muted loop playsinline height="100%">
+                  <source src="./videos/Event_Static2.mp4"
+                          type="video/mp4">
+                </video>
+              </div>
+          
+            </div>
+          </div>
+          <div class="column">
+            <div class="content">
+              <img src='./images/Static2.png' width="640" height="340",id="Results">
+            </div>
+          </div>
+        </div>
+        <!--/ Matting. -->
+        
+
+      <!-- Paper Pipeline. -->
+      <li><b>Results on Dynamic Scene</b> </li>
+      <!--/ Paper Pipeline. -->
+      <div class="container is-max-desktop">
+        <div class="columns is-centered">
+    
+          <!-- Two view Initialization. -->
+          <div class="column">
+            <div class="content">
+              <video id="sdf_tri" autoplay controls muted loop playsinline height="100%">
+                <source src="./videos/Dynamic1.mp4"
+                        type="video/mp4">
+              </video>
+            </div>
+          </div>
+          <!--/ Visual Effects. -->
+    
+          <!-- Matting. -->
+          <div class="column">
+            <div class="columns is-centered">
+              <div class="column content">
+                <video id="nba_demo" autoplay controls muted loop playsinline height="100%">
+                  <source src="./videos/Event_Dynamic1.mp4"
+                          type="video/mp4">
+                </video>
+              </div>
+          
+            </div>
+          </div>
+          <div class="column">
+            <div class="content">
+              <img src='./images/Dynamic1.png' width="640" height="340",id="Results">
+            </div>
+          </div>
+        </div>
+        <!--/ Matting. -->
+
+        <div class="columns is-centered">
+    
+          <!-- Two view Initialization. -->
+          <div class="column">
+            <div class="content">
+              <video id="sdf_tri" autoplay controls muted loop playsinline height="100%">
+                <source src="./videos/Dynamic2.mp4"
+                        type="video/mp4">
+              </video>
+            </div>
+          </div>
+          <!--/ Visual Effects. -->
+    
+          <!-- Matting. -->
+          <div class="column">
+            <div class="columns is-centered">
+              <div class="column content">
+                <video id="nba_demo" autoplay controls muted loop playsinline height="100%">
+                  <source src="./videos/Event_Dynamic2.mp4"
+                          type="video/mp4">
+                </video>
+              </div>
+          
+            </div>
+          </div>
+          <div class="column">
+            <div class="content">
+              <img src='./images/Dynamic2.png' width="640" height="340",id="Results">
+            </div>
+          </div>
+        </div>
+
+
+                <!-- Paper Pipeline. -->
+      <li><b>Results on Extreme Lighting</b> </li>
+      <!--/ Paper Pipeline. -->
+      <div class="container is-max-desktop">
+        <div class="columns is-centered">
+    
+          <!-- Two view Initialization. -->
+          <div class="column">
+            <div class="content">
+              <video id="sdf_tri" autoplay controls muted loop playsinline height="100%">
+                <source src="./videos/extreme1.mp4"
+                        type="video/mp4">
+              </video>
+            </div>
+          </div>
+          <!--/ Visual Effects. -->
+    
+          <!-- Matting. -->
+          <div class="column">
+            <div class="columns is-centered">
+              <div class="column content">
+                <video id="nba_demo" autoplay controls muted loop playsinline height="100%">
+                  <source src="./videos/Event_Extreme1.mp4"
+                          type="video/mp4">
+                </video>
+              </div>
+          
+            </div>
+          </div>
+          <div class="column">
+            <div class="content">
+              <img src='./images/Extreme1.png' width="640" height="340",id="Results">
+            </div>
+          </div>
+        </div>
+        <!--/ Matting. -->
+
+        <div class="columns is-centered">
+    
+          <!-- Two view Initialization. -->
+          <div class="column">
+            <div class="content">
+              <video id="sdf_tri" autoplay controls muted loop playsinline height="100%">
+                <source src="./videos/extreme2.mp4"
+                        type="video/mp4">
+              </video>
+            </div>
+          </div>
+          <!--/ Visual Effects. -->
+    
+          <!-- Matting. -->
+          <div class="column">
+            <div class="columns is-centered">
+              <div class="column content">
+                <video id="nba_demo" autoplay controls muted loop playsinline height="100%">
+                  <source src="./videos/Event_Extreme2.mp4"
+                          type="video/mp4">
+                </video>
+              </div>
+          
+            </div>
+          </div>
+          <div class="column">
+            <div class="content">
+              <img src='./images/Extreme2.png' width="640" height="340",id="Results">
+            </div>
+          </div>
+        </div>
+
+
+
+    <!-- Concurrent Work. -->
+    <div class="columns is-centered">
+      <div class="column is-full-width">
+        <h2 class="title is-3">References</h2>
+
+        <div class="content has-text-justified">
+          <p class="text" style="text-align:justify;">
+					
+						[1] Ravi Garg, Avinash L. Varna, Adi Hajj-Ahmad, and MinWu.
+            “Seeing” ENF: Power-Signature-Based Timestamp for Digital
+            Multimedia via Optical Sensing and Signal Processing.
+            IEEE Transactions on Information Forensics and Security,
+            8(9):1417–1432, 2013.</br>
+            [2] Saffet Vatansever, Ahmet Emir Dirik, and Nasir Memon.
+            Analysis of rolling shutter effect on ENF-based video forensics.
+            IEEE Transactions on Information Forensics and Security,
+            14(9):2262–2275, 2019.</br>
+						[3] Guang Hua, Han Liao, Haijian Zhang, Dengpan Ye, and Jiayi
+            Ma. Robust ENF Estimation Based on Harmonic Enhancement
+            and Maximum Weight Clique. IEEE Transactions on
+            Information Forensics and Security, 16:3874–3887, 2021.</br>
+						[4] Guang Hua, Han Liao, Qingyi Wang, Haijian Zhang, and
+            Dengpan Ye. Detection of Electric Network Frequency
+            in Audio Recordings–From Theory to Practical Detectors.
+            IEEE Transactions on Information Forensics and Security,
+            16:236–248, 2020.</br>
+						[5] Guillermo Gallego, Tobi Delbrück, Garrick Orchard, Chiara
+            Bartolozzi, Brian Taba, Andrea Censi, Stefan Leutenegger,
+            Andrew J Davison, Jörg Conradt, Kostas Daniilidis, et al.
+            Event-based vision: A survey. IEEE transactions on pattern
+            analysis and machine intelligence, 44(1):154–180, 2020.</br>
+						[6] Wei Liao, Xiang Zhang, Lei Yu, Shijie Lin, Wen Yang,
+            and Ning Qiao. Synthetic Aperture Imaging With Events
+            and Frames. In Proceedings of the IEEE/CVF Conference
+            on Computer Vision and Pattern Recognition, pages 17735–
+            17744, 2022.
+						
+					</p>
+        </div>
+      </div>
+    </div>
+    <!--/ Concurrent Work. -->
+</section>
+
+
+<section class="section" id="BibTeX">
+  <div class="container is-max-desktop content">
+    <h2 class="title">BibTeX</h2>
+    <pre><code>@article{Xu2023seeing,
+      title={“Seeing” Electric Network Frequency from Events},
+      author={Lexuan, Xu and Guang, Hua and Haijian, Zhhang and Lei, Yu and Ning, Qiao},
+      journal={Computer Vision and Pattern Recognition (CVPR)},
+      year={2023}
+    }
+</code></pre>
+  </div>
+</section>
+
+
+<footer class="footer">
+  <div class="container">
+    <div class="content has-text-centered">
+      <a class="icon-link"
+         href="./videos/nerfies_paper.pdf">
+        <i class="fas fa-file-pdf"></i>
+      </a>
+      <a class="icon-link" href="https://github.com/keunhong" class="external-link" disabled>
+        <i class="fab fa-github"></i>
+      </a>
+    </div>
+    <div class="columns is-centered">
+      <!-- <div class="column is-8"> -->
+    <div class="content has-text-justified">
+          <p class="text" style="text-align:justify;">
+            This website was modified from the <a
+            href="https://github.com/nerfies/nerfies.github.io">nerfies</a>. Appreaciate for sharing this perfect template!
+          </p>
+    </div>
+      <!-- </div> -->
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
