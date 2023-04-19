@@ -1,7 +1,5 @@
 # E-ENF
 
-This is the repository that contains source code for the [Nerfies website](https://nerfies.github.io).
-
 If you find E-ENF useful for your work please cite:
 ```
 @InProceedings{Xu2023seeing,
@@ -12,3 +10,4 @@ If you find E-ENF useful for your work please cite:
     }
 ```
 
+This is the repository that contains source code for the [Nerfies website](https://nerfies.github.io).
