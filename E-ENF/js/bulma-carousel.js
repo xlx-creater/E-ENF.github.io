@@ -2315,8 +2315,8 @@ var defaultOptions = {
 
   pagination: true,
 
-  loop: false,
-  infinite: false,
+  loop: true,
+  infinite: true,
 
   effect: 'translate',
   duration: 300,
