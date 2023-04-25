@@ -168,11 +168,11 @@ body {
 .video {
   width: 95%;
   height: auto;
-/*   position: relative; */
+  position: relative;
   top: 0;
   left: 0;
   display: block;
-  border: 1px solid black;
+  border: 1px solid rgb(0, 0, 0);
   z-index: -9999;
 }
 
