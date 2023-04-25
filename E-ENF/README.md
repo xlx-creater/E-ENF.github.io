@@ -6,7 +6,7 @@ If you find E-ENF useful for your work please cite:
       title={“Seeing” Electric Network Frequency from Events},
       author={Lexuan, Xu and Guang, Hua and Haijian, Zhang and Lei, Yu and Ning, Qiao},
       journal={Computer Vision and Pattern Recognition (CVPR)},
-      year={2022}
+      year={2023}
     }
 ```
 
