@@ -166,9 +166,9 @@ body {
 }
 
 .video {
-  width: 100%;
+  width: 95%;
   height: auto;
-  position: relative;
+/*   position: relative; */
   top: 0;
   left: 0;
   display: block;
