@@ -174,7 +174,6 @@ body {
   display: block;
   border: 1px solid rgb(0, 0, 0);
   box-sizing: border-box;
-  z-index: -9999;
 }
 
 .videoMerge {
