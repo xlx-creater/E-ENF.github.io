@@ -5,7 +5,7 @@
   <!-- <meta name="viewport" content="width=device-width, initial-scale=1"> -->
   <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=0.5, maximum-scale=1.0, user-scalable=yes" /> 
 
-  <title>“Seeing” Electric Network Frequency from Events</title>
+  <title>“Seeing” ENF from Neuromorphic Events: Modeling and Robust Estimation</title>
 
   <!-- Global site tag (gtag.js) - Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-PYVRSFMDRL"></script>
@@ -52,41 +52,38 @@
       <div class="columns is-centered">
         <div class="column is-four-fifths">
          <div class="column has-text-centered">
-          <h1 class="title is-1 publication-title" >“Seeing” Electric Network Frequency from Events</h1>
+          <h1 class="title is-1 publication-title" >“Seeing” ENF from Neuromorphic Events: Modeling and Robust Estimation</h1>
           <div class="is-size-5 publication-authors">
             <span class="author-block">
               <a href="https://scholar.google.com.hk/citations?hl=zh-CN&user=g3itm8IAAAAJ">Lexuan Xu</a><sup>1</sup><sup>*</sup>,</span>
             <span class="author-block">
-              <a href="https://ghua-ac.github.io/">Guang Hua</a><sup>2</sup><sup>*</sup>,</span>
+              <a href="https://ghua-ac.github.io/">Guang Hua</a><sup>2</sup>,</span>
             <span class="author-block">
               <a href="https://scholar.google.com/citations?user=cEWbejoAAAAJ&hl=zh-CN&oi=ao">Haijian Zhang</a><sup>1</sup><sup>†</sup>,
             </span>
             <span class="author-block">
               <a href="https://scholar.google.com/citations?user=Klc_GHUAAAAJ&hl=zh-CN">Lei Yu</a><sup>1</sup><sup>†</sup>,
-            <span class="author-block">
-              <a href="https://scholar.google.com/citations?user=e7FIdOMAAAAJ&hl=zh-CN&oi=ao">Ning Qiao</a><sup>3</sup>,
-            </span>
           </div>
 
           <div class="is-size-5 publication-authors">
             <span class="author-block"><sup>1</sup>Wuhan University, Wuhan, China</span> <br />
-            <span class="author-block"><sup>2</sup>Institute for Infocomm Research (I2R), A*STAR, Singapore</span> <br />
-            <span class="author-block"><sup>3</sup>SynSense Tech. Co. Ltd., Chengdu, China</span> <br />
+            <span class="author-block"><sup>2</sup>nfocomm Technology Cluster, Singapore Institute
+              of Technology, Singapore</span> <br />
           </div>
 
           <div class="column has-text-centered">
             <div class="publication-links">
               <!-- PDF Link. -->
               <span class="link-block">
-                <a href="https://arxiv.org/pdf/2305.02597.pdf"
+                <a href="https://xlx-creater.github.io/E-ENF/"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                       <i class="fas fa-file-pdf"></i>
                   </span>
-                  <span>Paper</span>
+                  <span>Prototype</span>
                 </a>
               </span>
-              <span class="link-block">
+              <!-- <span class="link-block">
                 <a href="https://arxiv.org/abs/2305.02597"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
@@ -94,10 +91,10 @@
                   </span>
                   <span>arXiv</span>
                 </a>
-              </span>
+              </span> -->
               <!-- Code Link. -->
               <span class="link-block">
-                <a href="https://github.com/xlx-creater/E-ENF"
+                <a href="https://github.com/xlx-creater/Improved_E-ENF"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                       <i class="fab fa-github"></i>
@@ -107,7 +104,7 @@
               </span>
               <!-- Dataset Link. -->
               <span class="link-block">
-                <a href="https://whueducn-my.sharepoint.com/:f:/g/personal/2018302120267_whu_edu_cn/En7DQ7Sg-KhIjeHlphDd1sIBA7alS2xg6UqKfbWf0E-3Zg?e=9aDKcG"
+                <a href="https://whueducn-my.sharepoint.com/personal/2018302120267_whu_edu_cn/_layouts/15/onedrive.aspx?id=%2Fpersonal%2F2018302120267%5Fwhu%5Fedu%5Fcn%2FDocuments%2FEV%2DENFD%2B&ga=1"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                       <i class="far fa-images"></i>
@@ -127,8 +124,8 @@
   <div class="subtitle has-text-centered">
     <div class="container is-max-desktop">
       <div class="hero-body">
-        <img src='./images/Illustrations.png' width="80%" height="auto",id="Illustrations"> 
-        <img src='./images/Results.png' width="80%" height="auto",id="Results">
+        <img src='./images/Intro.svg' width="80%" height="auto",id="Illustrations"> 
+        <!-- <img src='./images/Results.png' width="80%" height="auto",id="Results"> -->
         <h2 class="subtitle has-text-centered">
           <div class="columns is-centered has-text-centered">
             <div class="column is-four-fifths">
@@ -160,36 +157,36 @@
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
           <p>
-            Most of the artificial lights fluctuate in response to the
-            grid's alternating current and exhibit subtle variations in
-            terms of both intensity and spectrum, providing the potential
-            to estimate the Electric Network Frequency (ENF) from
-            conventional frame-based videos. Nevertheless, the performance
-            of Video-based ENF (V-ENF) estimation largely relies
-            on the imaging quality and thus may suffer from significant
-            interference caused by non-ideal sampling, motion,
-            and extreme lighting conditions.
+
+            Most artificial lights exhibit subtle fluctuations in
+            intensity and frequency in response to the influence of the
+            grid's alternating current, providing the potential to estimate
+            the Electric Network Frequency (ENF) from conventional frame-based 
+            videos. Nevertheless, the performance of Video-based ENF (V-ENF) 
+            estimation largely relies on the imaging quality and thus may suffer 
+            from significant interference caused by non-ideal sampling, 
+            scene diversity, motion interference, and extreme lighting conditions. 
           </p>
           <p>
-            In this paper, we show
-            that the ENF can be extracted without the above limitations
-            from a new modality provided by the so-called event
-            camera, a neuromorphic sensor that encodes the light intensity
-            variations and asynchronously emits events with extremely
-            high temporal resolution and high dynamic range.
-            Specifically, we first formulate and validate the physical
-            mechanism for the ENF captured in events, and then propose
-            a simple yet robust Event-based ENF (E-ENF) estimation
-            method through mode filtering and harmonic enhancement.
+            In this paper, we show that the ENF can be extracted
+            without the above limitations from a new modality provided by
+            the so-called event camera, a neuromorphic sensor that encodes
+            the light intensity variations and asynchronously emits events
+            with extremely high temporal resolution and high dynamic range.
+            Specifically, we formulate and validate the physical mechanism
+            for the ENF captured in events and then propose a simple yet
+            robust Event-based ENF (E-ENF) estimation method through
+            mode filtering and harmonic enhancement. 
           </p>
           <p>
-            Furthermore, we build an Event-Video ENF Dataset
-            (EV-ENFD) that records both events and videos in diverse
-            scenes. Extensive experiments on EV-ENFD demonstrate
-            that our proposed E-ENF method can extract more accurate
-            ENF traces, outperforming the conventional V-ENF by
-            a large margin, especially in challenging environments with
-            object motions and extreme lighting conditions.
+            To validate the effec-
+            tiveness, we build the first Event-Video ENF Dataset (EV-ENFD)
+            and its extension EV-ENFD+ with diverse scenarios, including
+            static, dynamic, and extreme lighting scenes. Comprehensive
+            experiments have been conducted on our proposed datasets,
+            showcasing that our proposed E-ENF significantly outperforms
+            the V-ENF in extracting accurate ENF traces, especially in
+            challenging environments.
           </p>
         </div>
       </div>
@@ -200,21 +197,13 @@
 
 
 
-<section class="section" id="Dataset">
-  <!-- <section class="section" id="Dataset"> -->
-   <!-- Dataset. -->
+<!-- <section class="section" id="Dataset">
+
   <div class="container is-max-desktop">
      <h2 class="title is-3">Dataset</h2> 
      <a href="https://whueducn-my.sharepoint.com/:f:/g/personal/2018302120267_whu_edu_cn/En7DQ7Sg-KhIjeHlphDd1sIBA7alS2xg6UqKfbWf0E-3Zg?e=9aDKcG"
      <h3 class="title is-4"><li> Event-Video ENF Dataset (EV-ENFD)</li></h3>
     </a>
-   <!-- <section class="section"> -->
-    <!--/ Paper Pipeline. -->
-    
-      <!-- <div class="columns is-centered"> -->
-  
-        <!-- Two view Initialization. -->
-        <!-- <div class="column"> -->
           <div class="content">
             <div class="content has-text-justified">  
             <p>
@@ -233,38 +222,38 @@
             </div>
           </div>
 
-            <li><b>Static Scenes</b> </li>
+            <li><b>Static Scenes</b> </li> -->
         <!-- </div> -->
       <!-- </div>     -->
       
       <!-- <div class="container" style="width: 100%;height: 200px;"> -->
-        <div id="results-carousel" class="carousel results-carousel" style="width: auto;height: auto;">
+        <!-- <div id="results-carousel" class="carousel results-carousel" style="width: auto;height: auto;">
           <div class="item" style="width: auto;height: auto;margin:0 auto;">
-            <img src='./images/static/1.png'>
+            <img src='./images/static/1.png'> -->
             <!-- <img src='./images/static/2.png' style="width: 33%;height:200px;
             margin-right:0.5%">
             <img src='./images/static/3.png' style="width: 33%;height:200px;"> -->
-          </div>
+          <!-- </div>
           <div class="item" style="width: auto;height: auto;;margin:0 auto;">
-            <img src='./images/static/2.png'>
+            <img src='./images/static/2.png'> -->
             <!-- <img src='./images/static/5.png' style="width: 33%;height:200px;margin-right:0.5%">
             <img src='./images/static/6.png' style="width: 33%;height:200px;"> -->
-          </div>
-          <div class="item" style="width: auto;height: auto;margin:0 auto;">
-            <img src='./images/static/3.png'>
+          <!-- </div> -->
+          <!-- <div class="item" style="width: auto;height: auto;margin:0 auto;">
+            <img src='./images/static/3.png'> -->
             <!-- <img src='./images/static/8.png' style="width: 33%;height:200px;margin-right:0.5%">
             <img src='./images/static/9.png' style="width: 33%;height:200px;"> -->
-          </div>
+          <!-- </div>
           <div class="item" style="width: auto;height: auto;margin:0 auto;">
-            <img src='./images/static/4.png'>
+            <img src='./images/static/4.png'> -->
             <!-- <img src='./images/static/11.png' style="width: 33%;height:200px;margin-right:0.5%">
             <img src='./images/static/12.png' style="width: 33%;height:200px;"> -->
-          </div>
+          <!-- </div>
           <div class="item" style="width: auto;height: auto;margin:0 auto;">
-            <img src='./images/static/5.png'>
+            <img src='./images/static/5.png'> -->
             <!-- <img src='./images/static/14.png' style="width: 33%;height:200px;margin-right:0.5%">
             <img src='./images/static/15.png' style="width: 33%;height:200px;"> -->
-          </div>
+          <!-- </div>
           <div class="item" style="width:auto;height: auto;margin:0 auto;">
             <img src='./images/static/6.png'>
           </div>
@@ -298,16 +287,16 @@
           <div class="item" style="width:auto;height: auto;margin:0 auto;">
             <img src='./images/static/16.png'>
           </div>
-        </div>
+        </div> -->
       <!-- </div> -->
       
 
         <!-- <div class="column is-four-fifths"> -->
-          <li><b>Dynamic Scenes (<i>Object Motion, Camera Motion, and Both</i>)</b> </li>  
+          <!-- <li><b>Dynamic Scenes (<i>Object Motion, Camera Motion, and Both</i>)</b> </li>   -->
         <!-- </div> -->
     
       <!-- <div class="container" style="width: 100%;height: 200px;"> -->
-        <div id="results-carousel" class="carousel results-carousel" style="width: auto;height: auto;">
+        <!-- <div id="results-carousel" class="carousel results-carousel" style="width: auto;height: auto;">
           <div class="item" style="width: auto;height: auto;margin:0 auto;">
             <img src='./images/dynamic/1.png'>
           </div>
@@ -383,13 +372,13 @@
           <div class="item" style="width:auto;height: auto;margin:0 auto;">
             <img src='./images/dynamic/25.png'>
           </div>
-        </div>
+        </div> -->
       <!-- </div> -->
       
       
-      <li><b>Extreme Lighting</b> </li>
+      <!-- <li><b>Extreme Lighting</b> </li> -->
       <!-- <div class="container" style="width: 100%;height: 200px;"> -->
-        <div id="results-carousel" class="carousel results-carousel" style="width: auto;height: auto;">
+        <!-- <div id="results-carousel" class="carousel results-carousel" style="width: auto;height: auto;">
           <div class="item" style="width: auto;height: auto;margin:0 auto;">
             <img src='./images/extreme/1.png'>
           </div>
@@ -420,12 +409,12 @@
           <div class="item" style="width:auto;height: auto;margin:0 auto;">
             <img src='./images/extreme/10.png'>
           </div>
-        </div>
+        </div> -->
       <!-- </div> -->
-  </div>
+  <!-- </div> -->
 
   
-</section>
+<!-- </section> -->
 
 
 
@@ -440,34 +429,84 @@
     <!--/ Comparsion. -->
   </div> 
     <div class="container is-max-desktop" style="margin: 0 auto;" >
-      <li><b>Results on Static Scene</b> </li>
-
+      <li><b>Static Scene</b> </li>
+       
       <!-- <div class="container is-max-desktop"> -->
         <div class="columns is-centered">
     
           <!-- Two view Initialization. -->
           <div class="column">
 
-              <video id="sdf_tri" autoplay controls muted loop playsinline  width="95%" >
-                <source src="./videos/static1.mp4"
+              <video id="sdf_tri" autoplay controls muted loop playsinline  width="100%">
+                <source src="./videos/static/White_Wall.mp4"
                         type="video/mp4">
               </video>
+          </div>
+
+          <div class="column">
+
+            <img src='./images/Results/white wall/Phone2.svg' width="100%",id="Results">
 
           </div>
+          
+          <div class="column">
+
+            <img src='./images/Results/white wall/Video2.svg' width="100%",id="Results">
+
+          </div>
+
           <!--/ Visual Effects. -->
     
           <!-- Matting. -->
           <div class="column">
 
-                <video id="nba_demo" autoplay controls muted loop playsinline width="95%"  style="border: 1px solid rgb(0, 0, 0);">
-                  <source src="./videos/Event_Static1.mp4"
+                <video id="nba_demo" autoplay controls muted loop playsinline width="100%"  style="border: 1px solid rgb(0, 0, 0);">
+                  <source src="./videos/static/White_Wall(Events).mp4"
+                          type="video/mp4" >
+                </video>
+          </div>
+          <div class="column">
+
+              <img src='./images/Results/white wall/Event.svg' width="100%",id="Results">
+          </div>
+        </div>
+        
+        <div class="columns is-centered">
+    
+          <!-- Two view Initialization. -->
+          <div class="column">
+
+              <video id="sdf_tri" autoplay controls muted loop playsinline  width="100%" >
+                <source src="./videos/static/Background.mp4"
+                        type="video/mp4">
+              </video>
+          </div>
+
+          <div class="column">
+
+            <img src='./images/Results/background/Phone2.svg' width="100%",id="Results">
+
+          </div>
+          
+          <div class="column">
+
+            <img src='./images/Results/background/Video2.svg' width="100%",id="Results">
+          </div>
+
+          <!--/ Visual Effects. -->
+    
+          <!-- Matting. -->
+          <div class="column">
+
+                <video id="nba_demo" autoplay controls muted loop playsinline width="100%"  style="border: 1px solid rgb(0, 0, 0);">
+                  <source src="./videos/static/Background(Events).mp4"
                           type="video/mp4" >
                 </video>
 
           </div>
           <div class="column">
 
-              <img src='./images/Static1.png' width="95%" style="transform:translateY(-12px)",id="Results">
+              <img src='./images/Results/background/Event.svg' width="100%",id="Results">
 
           </div>
         </div>
@@ -477,34 +516,48 @@
           <!-- Two view Initialization. -->
           <div class="column">
 
-              <video id="sdf_tri" autoplay controls muted loop playsinline width="95%">
-                <source src="./videos/static2.mp4"
+              <video id="sdf_tri" autoplay controls muted loop playsinline  width="100%" >
+                <source src="./videos/static/common static.mp4"
                         type="video/mp4">
               </video>
-
+              <center><p>Video</p></center>
           </div>
+
+          <div class="column">
+
+            <img src='./images/Results/normal static/Phone2.svg' width="100%",id="Results">
+            <center><p>Video-LI</p></center>
+          </div>
+          
+          <div class="column">
+
+            <img src='./images/Results/normal static/Video2.svg' width="100%",id="Results">
+            <center><p>Video-HI</p></center>
+          </div>
+
           <!--/ Visual Effects. -->
     
           <!-- Matting. -->
           <div class="column">
 
-                <video id="nba_demo" autoplay controls muted loop playsinline width="95%" style="border: 1px solid rgb(0, 0, 0);">
-                  <source src="./videos/Event_Static2.mp4"
-                          type="video/mp4">
+                <video id="nba_demo" autoplay controls muted loop playsinline width="100%"  style="border: 1px solid rgb(0, 0, 0);">
+                  <source src="./videos/static/common static(Events).mp4"
+                          type="video/mp4" >
                 </video>
+                <center><p>Event Stream</p></center>
 
           </div>
           <div class="column">
-
-              <img src='./images/Static2.png' width="95%" style="transform:translateY(-12px)",id="Results">
-
+              <img src='./images/Results/normal static/Event.svg' width="100%",id="Results">
+              <center><p>Event</p></center>
           </div>
         </div>
-        <!--/ Matting. -->
-      <!-- </div>   -->
+
+
+       
 
       <!-- Paper Pipeline. -->
-      <li><b>Results on Dynamic Scene</b> </li>
+      <li><b>Dynamic Scene</b> </li>
       <!--/ Paper Pipeline. -->
       <!-- <div class="container is-max-desktop"> -->
         <div class="columns is-centered">
@@ -512,122 +565,262 @@
           <!-- Two view Initialization. -->
           <div class="column">
 
-              <video id="sdf_tri" autoplay controls muted loop playsinline width="95%">
-                <source src="./videos/Dynamic1.mp4"
+              <video id="sdf_tri" autoplay controls muted loop playsinline  width="100%" >
+                <source src="./videos/dynamic/left_right.mp4"
                         type="video/mp4">
               </video>
 
           </div>
+
+          <div class="column">
+
+            <img src='./images/Results/left_right/Phone2.svg' width="100%",id="Results">
+
+          </div>
+          
+          <div class="column">
+
+            <img src='./images/Results/left_right/Video2.svg' width="100%",id="Results">
+
+          </div>
+
           <!--/ Visual Effects. -->
     
           <!-- Matting. -->
           <div class="column">
 
-                <video id="nba_demo" autoplay controls muted loop playsinline width="95%" style="border: 1px solid rgb(0, 0, 0);">
-                  <source src="./videos/Event_Dynamic1.mp4"
-                          type="video/mp4">
-                </video>
-
-          </div>
-          <div class="column">
-
-              <img src='./images/Dynamic1.png' width="95%" style="transform:translateY(-12px)",id="Results">
-
-          </div>
-        </div>
-        <!--/ Matting. -->
-
-        <div class="columns is-centered">
-    
-          <!-- Two view Initialization. -->
-          <div class="column">
-
-              <video id="sdf_tri" autoplay controls muted loop playsinline width="95%">
-                <source src="./videos/Dynamic2.mp4"
-                        type="video/mp4">
-              </video>
-
-          </div>
-          <!--/ Visual Effects. -->
-    
-          <!-- Matting. -->
-          <div class="column">
-  
-                <video id="nba_demo" autoplay controls muted loop playsinline width="95%"style="border: 1px solid rgb(0, 0, 0);">
-                  <source src="./videos/Event_Dynamic2.mp4"
-                          type="video/mp4">
-                </video>
-
-          </div>
-          <div class="column">
- 
-              <img src='./images/Dynamic2.png' width="95%" style="transform:translateY(-12px)",id="Results">
-
-          </div>
-        </div>
-
-      <!-- </div> -->
-                <!-- Paper Pipeline. -->
-      <li><b>Results on Extreme Lighting</b> </li>
-      <!--/ Paper Pipeline. -->
-      <!-- <div class="container is-max-desktop"> -->
-        <div class="columns is-centered">
-    
-          <!-- Two view Initialization. -->
-          <div class="column">
-
-              <video id="sdf_tri" autoplay controls muted loop playsinline width="95%">
-                <source src="./videos/extreme1.mp4"
-                        type="video/mp4">
-              </video>
-
-          </div>
-          <!--/ Visual Effects. -->
-    
-          <!-- Matting. -->
-          <div class="column">
-
-                <video id="nba_demo" autoplay controls muted loop playsinline width="95%"style="border: 1px solid rgb(0, 0, 0);">
-                  <source src="./videos/Event_Extreme1.mp4"
-                          type="video/mp4">
-                </video>
-
-          </div>
-          <div class="column">
-
-              <img src='./images/Extreme1.png' width="95%" style="transform:translateY(-12px)",id="Results">
-
-          </div>
-        </div>
-        <!--/ Matting. -->
-
-        <div class="columns is-centered" >
-          <!-- Two view Initialization. -->
-          <div class="column">
-
-              <video id="sdf_tri" autoplay controls muted loop playsinline width="95%">
-                <source src="./videos/extreme2.mp4"
-                        type="video/mp4">
-              </video>
-
-          </div>
-          <!--/ Visual Effects. -->
-    
-          <!-- Matting. -->
-          <div class="column" >
-
-                <video id="nba_demo" autoplay controls muted loop playsinline width="95%"style="border: 1px solid rgb(0, 0, 0); ">
-                  <source src="./videos/Event_Extreme2.mp4"
+                <video id="nba_demo" autoplay controls muted loop playsinline width="100%"  style="border: 1px solid rgb(0, 0, 0);">
+                  <source src="./videos/dynamic/left_right(Events).mp4"
                           type="video/mp4" >
                 </video>
 
           </div>
-          <div class="column" >
-              
-              <img src='./images/Extreme2.png' width="95%" style="transform:translateY(-12px)" ,id="Results" >
+          <div class="column">
+
+              <img src='./images/Results/left_right/Event.svg' width="100%",id="Results">
 
           </div>
-        </div> 
+        </div>
+        
+
+        <div class="columns is-centered">
+    
+          <!-- Two view Initialization. -->
+          <div class="column">
+
+              <video id="sdf_tri" autoplay controls muted loop playsinline  width="100%" >
+                <source src="./videos/dynamic/for_back.mp4"
+                        type="video/mp4">
+              </video>
+
+          </div>
+
+          <div class="column">
+
+            <img src='./images/Results/for_back/Phone2.svg' width="100%",id="Results">
+
+          </div>
+          
+          <div class="column">
+
+            <img src='./images/Results/for_back/Video2.svg' width="100%",id="Results">
+
+          </div>
+
+          <!--/ Visual Effects. -->
+    
+          <!-- Matting. -->
+          <div class="column">
+
+                <video id="nba_demo" autoplay controls muted loop playsinline width="100%"  style="border: 1px solid rgb(0, 0, 0);">
+                  <source src="./videos/dynamic/for_back(Events).mp4"
+                          type="video/mp4" >
+                </video>
+
+          </div>
+          <div class="column">
+
+              <img src='./images/Results/for_back/Event.svg' width="100%",id="Results">
+
+          </div>
+        </div>
+        
+
+        <div class="columns is-centered">
+    
+          <!-- Two view Initialization. -->
+          <div class="column">
+
+              <video id="sdf_tri" autoplay controls muted loop playsinline  width="100%" >
+                <source src="./videos/dynamic/Rotation.mp4"
+                        type="video/mp4">
+              </video>
+
+          </div>
+
+          <div class="column">
+
+            <img src='./images/Results/Rotation/Phone2.svg' width="100%",id="Results">
+
+          </div>
+          
+          <div class="column">
+
+            <img src='./images/Results/Rotation/Video2.svg' width="100%",id="Results">
+
+          </div>
+
+          <!--/ Visual Effects. -->
+    
+          <!-- Matting. -->
+          <div class="column">
+
+                <video id="nba_demo" autoplay controls muted loop playsinline width="100%"  style="border: 1px solid rgb(0, 0, 0);">
+                  <source src="./videos/dynamic/Rotation(Events).mp4"
+                          type="video/mp4" >
+                </video>
+
+          </div>
+          <div class="column">
+
+              <img src='./images/Results/Rotation/Event.svg' width="100%",id="Results">
+
+          </div>
+        </div>
+        
+        <div class="columns is-centered">
+    
+          <!-- Two view Initialization. -->
+          <div class="column">
+
+              <video id="sdf_tri" autoplay controls muted loop playsinline  width="100%" >
+                <source src="./videos/dynamic/Common motion.mp4"
+                        type="video/mp4">
+              </video>
+              <center><p>Video</p></center>
+          </div>
+
+          <div class="column">
+
+            <img src='./images/Results/normal motion/Phone2.svg' width="100%",id="Results">
+            <center><p>Video-LI</p></center>
+          </div>
+          
+          <div class="column">
+
+            <img src='./images/Results/normal motion/Video2.svg' width="100%",id="Results">
+            <center><p>Video-HI</p></center>
+          </div>
+
+          <!--/ Visual Effects. -->
+    
+          <!-- Matting. -->
+          <div class="column">
+
+                <video id="nba_demo" autoplay controls muted loop playsinline width="100%"  style="border: 1px solid rgb(0, 0, 0);">
+                  <source src="./videos/dynamic/Common motion(Events).mp4"
+                          type="video/mp4" >
+                </video>
+                <center><p>Event Stream</p></center>
+          </div>
+          <div class="column">
+
+              <img src='./images/Results/normal motion/Event.svg' width="100%",id="Results">
+              <center><p>Event</p></center>
+          </div>
+        </div>
+
+
+
+
+
+      <li><b>Extreme Lighting</b> </li>
+        
+
+      <div class="columns is-centered">
+    
+        <!-- Two view Initialization. -->
+        <div class="column">
+
+            <video id="sdf_tri" autoplay controls muted loop playsinline  width="100%" >
+              <source src="./videos/extreme/dim.mp4"
+                      type="video/mp4">
+            </video>
+
+        </div>
+
+        <div class="column">
+
+          <img src='./images/Results/dim/Phone2.svg' width="100%",id="Results">
+
+        </div>
+        
+        <div class="column">
+
+          <img src='./images/Results/dim/Video2.svg' width="100%",id="Results">
+
+        </div>
+
+        <!--/ Visual Effects. -->
+  
+        <!-- Matting. -->
+        <div class="column">
+
+              <video id="nba_demo" autoplay controls muted loop playsinline width="100%"  style="border: 1px solid rgb(0, 0, 0);">
+                <source src="./videos/extreme/dim(Events).mp4"
+                        type="video/mp4" >
+              </video>
+
+        </div>
+        <div class="column">
+
+            <img src='./images/Results/dim/Event.svg' width="100%",id="Results">
+
+        </div>
+      </div>
+        
+      <div class="columns is-centered">
+    
+        <!-- Two view Initialization. -->
+        <div class="column">
+
+            <video id="sdf_tri" autoplay controls muted loop playsinline  width="100%" >
+              <source src="./videos/extreme/Multiple.mp4"
+                      type="video/mp4">
+            </video>
+            <center><p>Video</p></center>
+        </div>
+
+        <div class="column">
+
+          <img src='./images/Results/multiple/phone2.svg' width="100%",id="Results">
+          <center><p>Video-LI</p></center>
+        </div>
+        
+        <div class="column">
+
+          <img src='./images/Results/multiple/Video2.svg' width="100%",id="Results">
+          <center><p>Video-HI</p></center>
+        </div>
+
+        <!--/ Visual Effects. -->
+  
+        <!-- Matting. -->
+        <div class="column">
+
+              <video id="nba_demo" autoplay controls muted loop playsinline width="100%"  style="border: 1px solid rgb(0, 0, 0);">
+                <source src="./videos/extreme/Multiple(Events).mp4"
+                        type="video/mp4" >
+              </video>
+              <center><p>Event Stream</p></center>
+        </div>
+        <div class="column">
+
+            <img src='./images/Results/multiple/Event.svg' width="100%",id="Results">
+            <center><p>Event</p></center>
+        </div>
+      </div>
+        
     </div>
   <!-- </div>   -->
 </section>
